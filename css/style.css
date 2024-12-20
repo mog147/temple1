@@ -1,0 +1,614 @@
+/* ------------------------------ */
+/* 基本設定 */
+
+/* 基本色 */
+:root {
+  --main-color : #e95792;
+  --accent-color : #67c09f;
+  --sub-color : #79abdc;
+  --dark-main-color : #333; /*rgba(51, 51, 51, 0)*/
+  --text-bright-color : #fff; /*rgba(255, 255, 255, 0)*/
+  --icon-color : #e95792;
+  --icon-bk-color : #fff;
+  --large-width:1000px;
+  --middle-width:800px;
+  --small-width:600px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, 
+  ".SFNSDisplay-Regular", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+  Helvetica, "游ゴシック Medium", meiryo, sans-serif;
+  font-size: 16px;
+  background-color: var(--dark-main-color);
+}
+
+h2 {
+  color: var(--text-bright-color);
+  letter-spacing: 0.5rem;
+  font-weight: normal;
+
+}
+
+p {
+  color: var(--text-bright-color);
+  letter-spacing: 0.2rem;
+  line-height: 2.5;
+}
+
+li {
+    list-style: none;
+    margin-right: 1rem;
+    margin: 1rem;
+}
+
+a {
+  color: var(--dark-main-color);
+  text-decoration: none;
+  text-align: center
+}
+
+.phone {
+  max-width: 100%;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+  padding: 3rem; 
+}
+
+
+.text {
+  text-align: center;
+  flex: 1;
+  padding-left:3rem;
+  padding-right: 3rem;
+
+  overflow-wrap: anywhere;
+  margin-bottom: 5rem;
+}
+
+
+
+.scrollbox {
+  width: 100%;
+  background-color: var(--dark-main-color);
+}
+
+ /** クラス指定の先頭の文字列がtitleだったらという指定*/
+ a[class^="title"] {
+  font-weight:normal;
+  letter-spacing: 0.3rem;
+  font-size: 1.5rem;
+
+  /* adobe fonts */
+  font-family: "vdl-gigamaru", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.titleA {
+  color: var(--main-color);
+}
+
+.titleB {
+  color: var(--accent-color);
+}
+
+/* 基本設定 */
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* リンクをちょうどいい位置に飛ばす */
+a.anchor {
+  display: block;
+  padding-top: 70px;
+  margin-top: -70px;
+}
+/* リンクをちょうどいい位置に飛ばす */
+/* ------------------------------ */
+
+/* ------------------------------ */
+ /* ロード時にページ全体をフェードイン */
+ body {
+  animation: fade 3s;
+}
+
+@keyframes fade {
+  0% {opacity: 0;
+  }
+  100% {opacity: 1;
+  }
+}
+ /* ロード時にページ全体をフェードイン */
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/*-----header-----*/
+
+.fixed {
+  position: fixed;
+}
+
+.header {
+  position: relative;
+  top: 5rem;
+
+  z-index: 100;
+  width: 600px;
+  height: 5rem;
+} 
+  
+
+
+.header__menu {
+  position: absolute;
+  padding-top: 1rem;
+  padding-right: 1rem;
+
+  z-index: 300;
+  width: 100vw;
+  max-width: 600px;   
+}
+
+
+.header__menu-button {
+  display: block;
+  font-size: 1rem;
+
+  background: none;
+  border: none;
+
+  margin-left: auto;
+  margin-right: 0;
+  padding: 2rem;
+}
+
+.header__menu-bar {
+    display: none;
+    position: absolute;
+    z-index: 200;
+    
+    height:110vh;
+    min-height: 700px;
+
+    width: 100vw;   
+    max-width: 600px;     
+}
+
+
+.header__menu-list{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  height: 100vh;
+  min-height: 1000px;
+
+  width: 100%;
+
+  margin-top: 0;
+  padding-right: 0;
+  padding-left: 0;
+  background-color: var(--accent-color);
+  
+
+}
+
+.header__menu-item a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 30px;
+    color: var(--text-bright-color);
+    letter-spacing: 0.3rem;
+}
+
+  
+/*-----header-----*/
+/* ------------------------------ */
+
+/* ------------------------------ */
+ /* hero-top */
+
+    .conA {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height:100vh;
+      min-height: 450px;
+      width: 100vw;
+
+      background-image:url(../img/dummy2.jpg);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      text-align: center;
+    
+      padding-bottom: 3rem;
+    
+      color: var(--text-bright-color);
+      
+    }
+
+/* hero-top */
+/* ------------------------------ */
+
+/* ------------------------------ */
+/* conB introduce**/
+
+
+    .conB .en_name {
+      margin-top: -1.5rem;
+      margin-right: 0.5rem;
+    }
+    
+    .sns__list{
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    .sns__item a {
+      /* aタグにmarginは効かないから一度ブロックにする必要あり  */
+      text-decoration: none;
+      font-size: 42px;
+      color: var(--accent-color);
+    }
+
+    .sns__item:last-child a {
+      margin-right: 0;
+    }
+    
+    .sns__item a:hover{
+        background-color:rgba(51,51,51,0.1) ;
+    }
+    
+
+/* conB introduce*/
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* conC col_1*/
+
+/* conC col_1*/
+/* ------------------------------ */
+
+/* ------------------------------ */
+/* conD 背景画像*/
+
+.conD__photo1 { 
+  background-image: url(../img/dummy.jpg);
+}
+
+.conD__photo2 { 
+  background-image: url(../img/dummy2.jpg);
+}
+
+.conD__photo3 { 
+  background-image: url(../img/dummy.jpg);
+}
+
+ /** クラス指定の先頭の文字列が[conD__photo]だったら*/
+[class^="conD__photo"]{
+  width: 100%;
+  min-height: 300px;
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+
+
+/* conD 背景画像*/
+/* ------------------------------ */
+/* ------------------------------ */
+/* btn */
+    
+    .more_btn {
+      position: relative;
+
+      /* 上下中央 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      letter-spacing: 0.2rem;
+      color: var(--accent-color);
+      margin-bottom: 3rem;
+      }
+
+/* btn */
+/* ------------------------------ */
+
+/* ------------------------------ */
+/* conE 横幅いっぱい画像 + text */
+
+div[class^="conE__photo"] {
+  position: relative;
+  min-height: 300px;
+  background-position: center;
+  background-size: cover;
+  margin: 3rem 0;
+}
+
+/* textを見やすくするために少し暗い色を画像に載せる */
+div[class^="conE__photo"]::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25,25,25,0.5);
+}
+
+.conE__photoA {
+  background-image: url(../img/dummy.jpg);
+}
+
+.conE__photoB {
+  background-image: url(../img/dummy2.jpg);
+}
+
+.conE__photoC {
+  background-image: url(../img/dummy.jpg);
+}
+
+.conE__link {
+  z-index: 1;
+  /* 画像の中心に文字 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  font-size: 2rem;
+  opacity: 1;
+  color: var(--text-bright-color);
+  letter-spacing: 0.5rem;
+  line-height: 1.5;
+}
+
+/* ------------------------------ */
+/* footer */
+ 
+.footer {
+  bottom: 0;
+  max-width: 100%;	
+  vertical-align: bottom;
+}
+
+/* footer */
+/* ------------------------------ */
+/* pege topにとぶ */
+
+#page_top{
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 90px;
+    height: 90px;
+  }
+
+  #page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;;
+    color: var(--accent-color);
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -40px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+  #page_top a::after{
+    content: 'PAGE TOP';
+    font-size: 13px;
+    position: absolute;
+    top: 45px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    color: var(--accent-color);
+  }  
+
+  /* pege topにとぶ */
+/* ------------------------------ */
+
+ /* ------------------------ */
+/* phoneのときの制御 */
+  @media (max-width:599px) {
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+      font-size: 14px;
+  }
+
+  .conPC {
+      display: none;
+  }
+  
+  .conA {
+    position:absolute;
+    top:0;
+    left: 0;
+  }
+
+  .scrollbox {
+    padding-top: 45rem;
+  }
+
+  .header__menu {
+    position:absolute;
+    top:-5rem;
+    left: 0;
+  }
+
+  .header__menu-bar {
+    position:absolute;
+    top:-5rem;
+    left: 0;
+  }
+}
+
+/* phoneのときの制御 */
+/* ------------------------ */
+
+/* ------------------------ */
+/* タブレットのときの制御 */
+@media (min-width:600px) and (max-width:799px) {
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .header__menu-list{
+    border-radius: 20px 20px 0 0 ;
+    max-width:600px;
+  }
+
+  .conPC {
+    position: fixed;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 450px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+  
+    width: 100%;
+    
+    overflow: hidden;
+    content:'';
+    
+  }
+  
+  .conPC img{
+      width: 100%;
+  }
+
+  .phone {
+    position: absolute;
+    max-width:600px;
+    top: 5rem;
+    left: 10rem;
+  }
+  .conA {
+    border-radius: 20px 20px 0 0 ;
+    max-width:600px;
+  }
+
+}
+/* タブレットのときの制御 */
+/* ------------------------ */
+
+/* ------------------------ */
+/* PCのときの制御 */
+@media (min-width:800px)  {
+
+  h2 {
+      font-size: 24px;
+  }
+
+  p {
+      font-size: 18px;
+  }
+
+  .header__menu-list{
+    border-radius: 20px 20px 0 0 ;
+    max-width:600px;
+  }
+
+  .phone {
+    max-width:600px;
+  }
+
+  .conPC {
+    position: fixed;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 450px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+  
+    width: 100%;
+    
+    overflow: hidden;
+    content:'';
+    
+  }
+  
+  .conPC img{
+      width: 100%;
+  }
+
+  .phone {
+    position: absolute;
+    top: 5rem;
+    left: 10rem;
+  }
+
+  .conA {
+    border-radius: 20px 20px 0 0 ;
+    max-width:600px;
+    min-height: 1000px;
+    
+  } 
+
+}
+/* PCのときの制御 */
+/* ------------------------ */
+
+/* ------------------------ */
+/* ダークモードの対応 */
+.div {
+  color: light-dark(#333, #fff);
+  background-color: light-dark(#fff, #333);
+}
+/* ダークモードの対応 */
+/* ------------------------ */
+
+
